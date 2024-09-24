@@ -1,7 +1,4 @@
-public class IEmpleado {
+public interface IEmpleado {
     
-    public void calcularIncentivo()
-    {
-        
-    }
+    public double calcularIncentivo(double salario);
 }

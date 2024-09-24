@@ -1,4 +1,4 @@
-public class EmpleadoTiempoParcial extends Empleado {
+public class EmpleadoTiempoParcial extends Empleado implements IEmpleado {
     private int horasPorSemana;
 
 
@@ -9,14 +9,20 @@ public class EmpleadoTiempoParcial extends Empleado {
         
     }
 
-    public void calcularSalario(double salarioHora, int horasPorSemana)
+    //calcula el salario semanal en funcion de el salario por hora y las horas que trabajo a la semana
+    public double calcularSalario()
     {
-
+        double salarioPorSemana = (salario * horasPorSemana)  ;
+        salarioPorSemana += calcularIncentivo(salarioPorSemana);
+        return salarioPorSemana;
     }
 
-    public void calcularIncentivo()
-    {
+    @Override
+    // aqui es el 3% sobre el pago por semana del total de horas trabajadas
+    public double calcularIncentivo(double salarioPorSemana) {
+        double salarioSobreIncentivo = salarioPorSemana * 0.03;
         //3% sobre el calculo del salario
+        return salarioSobreIncentivo; 
     }
 
     public int getHorasPorSemana() 

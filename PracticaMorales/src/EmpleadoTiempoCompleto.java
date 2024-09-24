@@ -1,4 +1,4 @@
-public class EmpleadoTiempoCompleto extends Empleado
+public class EmpleadoTiempoCompleto extends Empleado implements IEmpleado
 {
     private int horasTrabajadas;
     public EmpleadoTiempoCompleto(String nombre, int id, double salario,int horasTrabajadas)
@@ -9,12 +9,15 @@ public class EmpleadoTiempoCompleto extends Empleado
 
     public void calcularSalario(int horas, double salarioBase)
     {
-
+        // FALTA AQUIII
     }
 
-    public void calcularIncentivo()
-    {
+    @Override
+    // Aqui es el 5% sobre el pago mensual 
+    public double calcularIncentivo(double salarioPorSemana) {
+        double salarioSobreIncentivo = salarioPorSemana * 0.03;
         //5% sobre el calculo del salario
+        return salarioSobreIncentivo; 
     }
 
     public int getHorasTrabajadas()

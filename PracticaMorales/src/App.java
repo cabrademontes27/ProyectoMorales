@@ -6,6 +6,8 @@ public class App {
         EmpleadoTiempoParcial empleadoTiempoParcial1 = new EmpleadoTiempoParcial("Ana",202, 18.0, 15);
 
 
+        
+
         //recibe NOMBRE -- ID -- SALARIO -- HORAS 
         
     }

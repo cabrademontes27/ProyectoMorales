@@ -1,7 +1,7 @@
 public class Empleado {
-    private String nombre;
-    private int id;
-    private double salario;
+    protected String nombre;
+    protected int id;
+    protected double salario;
 
     public Empleado (String nombre, int id, double salario)
     {
@@ -41,9 +41,9 @@ public class Empleado {
         this.salario = salario;
     }
 
-    public void calcularSalario()
+    public double calcularSalario()
     {
-        
+        return 0.0;
     }
 
     public void mostrar()
