@@ -51,5 +51,6 @@ public class Empleado {
         System.out.println("Nombre: " + getNombre() + "\nID: " + getId() + "\nSalario: " + getSalario());
     }
 
+    
 
 }

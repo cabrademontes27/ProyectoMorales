@@ -34,5 +34,13 @@ public class EmpleadoTiempoParcial extends Empleado implements IEmpleado {
     {
         this.horasPorSemana = horasPorSemana;
     }
+
+    @Override
+    public void mostrar()
+    {
+        System.out.println("");
+        System.out.println("Empleado de tiempo Parcial: ");
+        System.out.println("Nombre: " + getNombre() + "\nID: " + getId() + "\nSalario: " + getSalario());
+    }
     
 }
